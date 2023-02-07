@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.38afb766.css",
+    "main.js": "/static/js/main.a7581356.js",
+    "static/media/Jhalak_Bhandari.pdf": "/static/media/Jhalak_Bhandari.f00c0a64a96e65dcba08.pdf",
+    "static/media/th.jpg": "/static/media/th.80554f09c07b20b10b00.jpg",
+    "index.html": "/index.html",
+    "main.38afb766.css.map": "/static/css/main.38afb766.css.map",
+    "main.a7581356.js.map": "/static/js/main.a7581356.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38afb766.css",
+    "static/js/main.a7581356.js"
+  ]
+}
