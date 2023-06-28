@@ -1,0 +1,75 @@
+[debug] [2022-10-12T14:18:16.356Z] ----------------------------------------------------------------------
+[debug] [2022-10-12T14:18:16.358Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\bhand\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-10-12T14:18:16.358Z] CLI Version:   11.13.0
+[debug] [2022-10-12T14:18:16.358Z] Platform:      win32
+[debug] [2022-10-12T14:18:16.359Z] Node Version:  v16.16.0
+[debug] [2022-10-12T14:18:16.360Z] Time:          Wed Oct 12 2022 19:48:16 GMT+0530 (India Standard Time)
+[debug] [2022-10-12T14:18:16.360Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-12T14:18:16.369Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-12T14:18:16.370Z] > authorizing via signed-in user (bhandari.jhalak2018@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\bhand\OneDrive\Desktop\jhalakwebsite
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-12T14:18:22.972Z] > refreshing access token with scopes: []
+[debug] [2022-10-12T14:18:22.974Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-12T14:18:22.975Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-12T14:18:23.207Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-12T14:18:23.208Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-12T14:18:23.216Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-10-12T14:18:24.324Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-10-12T14:18:24.324Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2022-10-12T14:18:55.250Z] ----------------------------------------------------------------------
+[debug] [2022-10-12T14:18:55.252Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\bhand\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-10-12T14:18:55.252Z] CLI Version:   11.13.0
+[debug] [2022-10-12T14:18:55.252Z] Platform:      win32
+[debug] [2022-10-12T14:18:55.252Z] Node Version:  v16.16.0
+[debug] [2022-10-12T14:18:55.254Z] Time:          Wed Oct 12 2022 19:48:55 GMT+0530 (India Standard Time)
+[debug] [2022-10-12T14:18:55.254Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-12T14:18:55.260Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-12T14:18:55.260Z] > authorizing via signed-in user (bhandari.jhalak2018@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\bhand\OneDrive\Desktop\jhalakwebsite
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-10-12T14:19:23.727Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-10-12T14:19:23.727Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"Glimpseweb","name":"Glimpseweb"}
+[debug] [2022-10-12T14:19:25.469Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2022-10-12T14:19:25.470Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2022-10-12T14:19:25.641Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (C:\Users\bhand\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\bhand\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

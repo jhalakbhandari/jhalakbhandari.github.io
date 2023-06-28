@@ -1,0 +1,35 @@
+.images .box1 {
+  position: absolute;
+  top: 100px;
+  right: 80px;
+  background: url(../../img/image1.png) no-repeat 50% 50%;
+  background-size: cover;
+  width: 250px;
+  border: 0.5px solid gray;
+  height: 250px;
+}
+.images .box2 {
+  position: absolute;
+  top: 250px;
+  right: 410px;
+  background: url(../../img/image2.png) no-repeat 50% 50%;
+  background-size: cover;
+  width: 250px;
+  border: 0.5px solid gray;
+  height: 250px;
+}
+.images .box3 {
+  position: absolute;
+  top: 400px;
+  right: 120px;
+  background: url(../../img/image3.png) no-repeat 50% 50%;
+  background-size: cover;
+  width: 250px;
+  border: 0.5px solid gray;
+  height: 250px;
+}
+@media (min-width: 48px) and (max-width: 1400px) {
+  .images {
+    display: none;
+  }
+}
