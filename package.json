@@ -1,7 +1,6 @@
 {
   "home": "https://jhalakbhandari.github.io/jhalak/index.html",
   "name": "jhalakwebsite",
-  "proxy": "http://localhost:8080",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://jhalakbhandari.github.io",

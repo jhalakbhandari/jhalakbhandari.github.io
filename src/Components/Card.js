@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
-const Card = ({ title, description, imageUrl }) => {
+import { Link } from "react-router-dom";
+const Card = ({ title, description, imageUrl, projectLink }) => {
   return (
     <div className="card-container">
       <div className="image-container">
@@ -14,9 +15,11 @@ const Card = ({ title, description, imageUrl }) => {
           <p>{description}</p>
         </div>
         <div className="btn">
-          <button>
-            <p className="view">View More</p>
-          </button>
+          <Link>
+            <button>
+              <p className="view">View More</p>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

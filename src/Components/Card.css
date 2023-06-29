@@ -5,6 +5,7 @@
   transition: 0.3s;
   animation: ease-in-out;
   margin: 10px 5px 10px 10px;
+  border-radius: 5%;
 }
 .card-container:hover {
   transform: scale(1.1);

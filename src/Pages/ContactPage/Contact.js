@@ -1,15 +1,19 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React from "react";
+import { gsap, Power3 } from "gsap";
 import { contactConfig } from "../../content-config.js";
 import Swal from "sweetalert2";
 import emailjs from "emailjs-com";
 import Layout from "../../Layout/Layout.js";
+import Transition from "../../Components/Transition.js";
 function Contact() {
+  let tl = new gsap.timeline();
   const SERVICE_ID = "service_b05lmlr";
   const TEMPLATE_ID = "template_edrnvws";
   const USER_ID = "qTQ_rS5PVsCpuPrek";
   const handleOnSubmit = (e) => {
     e.preventDefault();
+
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
         console.log(result);
@@ -31,6 +35,7 @@ function Contact() {
   };
   return (
     <Layout>
+      <Transition timeline={tl} />
       <Container>
         <Row className="mb-5 mt-3 ">
           <Col lg="8">

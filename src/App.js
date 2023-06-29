@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Projects from "./Pages/ProjectsPage/Projects";
 import { Navigate } from "react-router-dom";
-import Login from "./Pages/LoginPage/Login";
+
 function App() {
   return (
     <>
@@ -16,7 +16,6 @@ function App() {
           <Route path="/home" element={<Navigate to={"/"} />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </>
