@@ -2,7 +2,9 @@ import React from "react";
 import { Pace, WindupChildren, Linebreaker } from "windups";
 import "./About.css";
 import { easings } from "react-animation";
+import { useAuth } from "../../context/auth";
 const About = () => {
+ 
   console.log(window.innerWidth);
   const style = {
     animation: ` pop-in ${easings.easeInExpo} 500ms forwards`,

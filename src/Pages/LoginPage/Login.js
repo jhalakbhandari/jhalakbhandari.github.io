@@ -1,34 +1,41 @@
 import React, { useState } from "react";
 import Layout from "../../Layout/Layout";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import toast from "react-hot-toast";
-import { gsap } from "gsap";
+import { useAuth } from "../../context/auth";
+import { toast } from "react-hot-toast";
 function Login() {
-  let tl = new gsap.timeline();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  const [auth, setAuth] = useAuth();
+  const location = useLocation();
   const handleSubmit = async (e) => {
-    setEmail(e.target.value);
-    setPassword(e.target.value);
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/api/v1/auth/login", {
+      const res = await axios.post("/api/v1/auth/login", {
         email,
         password,
       });
       if (res && res.data.success) {
-        toast.success(res.data && res.data.message);
-        navigate("/");
+        setAuth({ ...auth, user: res.data.user, token: res.data.token });
+        localStorage.setItem("auth", JSON.stringify(res.data));
+        navigate(location.state || "/");
       } else {
         toast.error(res.data.message);
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
       toast.error("something went wrong");
     }
+  };
+  const emailChangeHandler = (e) => {
+    setEmail(e.target.value);
+    console.log(e.target.value);
+  };
+  const passwordChangeHandler = (e) => {
+    setPassword(e.target.value);
+    console.log(e.target.value);
   };
   return (
     <Layout>
@@ -46,6 +53,9 @@ function Login() {
                 className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
                 id="email"
                 placeholder="Your Email"
+                value={email}
+                onChange={emailChangeHandler}
+                required
               />
             </div>
             <div>
@@ -55,11 +65,15 @@ function Login() {
                 className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
                 id="password"
                 placeholder="Your Password"
+                value={password}
+                onChange={passwordChangeHandler}
+                required
               />
             </div>
 
             <div className="flex justify-center items-center mt-6">
               <button
+                type="submit"
                 className={`bg-green py-2 px-4 text-sm text-Black rounded border border-green focus:outline-none focus:border-green-dark`}
               >
                 Login
